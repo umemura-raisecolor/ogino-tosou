@@ -214,3 +214,43 @@ footer.site{background:var(--ai-deep);color:#e8e2d4;padding:56px 0 90px;font-siz
   .fix-tel .t{background:var(--karashi)}
   .fix-tel .m{background:var(--ai)}
 }
+
+/* ===== animation ===== */
+@keyframes heroUp{from{opacity:0;transform:translateY(28px)}to{opacity:1;transform:none}}
+@keyframes heroZoom{from{transform:scale(1.12)}to{transform:scale(1)}}
+@keyframes shine{0%{left:-60%}60%,100%{left:130%}}
+@keyframes pulse{0%,100%{box-shadow:0 0 0 0 rgba(197,139,42,.55)}50%{box-shadow:0 0 0 12px rgba(197,139,42,0)}}
+.hero .bg{animation:heroZoom 9s ease-out both}
+.hero .since{animation:heroUp .9s .2s both}
+.hero h1{animation:heroUp .9s .45s both}
+.hero p{animation:heroUp .9s .7s both}
+.hero .btns{animation:heroUp .9s .95s both}
+.ptitle h1,.ptitle .en{animation:heroUp .8s .15s both}
+
+.btn{position:relative;overflow:hidden;transition:transform .25s,box-shadow .25s}
+.btn:hover{transform:translateY(-3px);box-shadow:0 10px 22px rgba(19,37,61,.22)}
+.btn::after{content:"";position:absolute;top:0;left:-60%;width:40%;height:100%;background:linear-gradient(100deg,transparent,rgba(255,255,255,.45),transparent);transform:skewX(-20deg)}
+.btn-k::after{animation:shine 3.5s 1.5s infinite}
+.btn:hover::after{animation:shine .8s}
+.hero .btn-k{animation:pulse 2.4s 2s infinite}
+
+nav.gnav a{transition:color .2s,border-color .2s}
+.str,.case,.voice,.num,.step,.faq details{transition:transform .3s,box-shadow .3s}
+.str:hover,.case:hover,.voice:hover,.num:hover{transform:translateY(-6px);box-shadow:0 14px 30px rgba(19,37,61,.14)}
+.step:hover{transform:translateX(6px);box-shadow:0 8px 20px rgba(19,37,61,.1)}
+.case .ba img{transition:opacity .4s,transform .6s}
+.case:hover .ba img{transform:scale(1.05)}
+.portrait{transition:transform .4s}
+.portrait:hover{transform:rotate(-1deg) scale(1.02)}
+.case-tabs button{transition:background .2s,color .2s,transform .2s}
+.case-tabs button:hover{transform:translateY(-2px)}
+.fix-tel .t{animation:pulse 2.4s 3s infinite}
+
+/* scroll reveal: 表示が速く、見えにくくならない程度に */
+.js .rv{opacity:0;transform:translateY(24px);transition:opacity .6s ease,transform .6s ease}
+.js .rv.in{opacity:1;transform:none}
+
+@media (prefers-reduced-motion:reduce){
+  *,*::before,*::after{animation:none!important;transition:none!important}
+  .js .rv{opacity:1;transform:none}
+}
