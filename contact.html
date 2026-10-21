@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>お問い合わせ｜荻野塗装</title>
+<meta name="description" content="三鷹市・武蔵野市で昭和26年創業。三代続く地元の塗装店、荻野塗装。屋根・外壁・鉄部・木部の塗り替え、防水工事。お見積り無料。">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700&family=Shippori+Mincho:wght@500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="topbar">ご提案用デモサイト(合同会社ライズカラー作成)</div>
+<header class="site">
+  <div class="hd">
+    <a class="logo" href="index.html"><small>三鷹・武蔵野の塗装店</small><span>有限会社 荻野塗装</span></a>
+    <nav class="gnav" id="gnav"><ul><li><a href="index.html">トップ</a></li><li><a href="about.html">会社案内</a></li><li><a href="works.html">施工事例・お客様の声</a></li><li><a href="flow.html">施工の流れ</a></li><li><a href="faq.html">よくある質問</a></li><li><a href="contact.html" class="on">お問い合わせ</a></li></ul></nav>
+    <a class="hd-tel" href="tel:0422-47-1711"><small>お見積り無料・8:00〜18:00(日曜休み)</small><b>0422-47-1711</b></a>
+    <button class="menu-btn" onclick="document.getElementById('gnav').classList.toggle('open')">メニュー</button>
+  </div>
+</header>
+<div class="ptitle"><span class="en">CONTACT</span><h1>お問い合わせ</h1></div><div class="wrap crumb"><a href="index.html">トップ</a> ＞ お問い合わせ</div>
+<section style="padding-top:40px">
+  <div class="wrap" style="max-width:820px">
+    <p style="text-align:center;margin-bottom:30px">お見積り・ご相談・ご質問など、お気軽にお問い合わせください。<br>お急ぎの方は、お電話(0422-47-1711)が確実です。</p>
+    <form class="form" onsubmit="event.preventDefault();document.getElementById('dm').style.display='block'">
+      <label>お名前<span class="req">必須</span></label><input type="text" required>
+      <label>お電話番号<span class="req">必須</span></label><input type="tel" required>
+      <label>メールアドレス</label><input type="email">
+      <label>ご住所(市区町村まで)</label><input type="text" placeholder="例)三鷹市上連雀">
+      <label>ご相談の内容</label>
+      <select><option>外壁・屋根の塗り替え</option><option>鉄部・木部の塗装</option><option>防水工事</option><option>お見積りの依頼</option><option>その他</option></select>
+      <label>くわしい内容</label><textarea placeholder="気になっている箇所や、ご希望の時期などをご記入ください"></textarea>
+      <div class="send"><button type="submit">送信する</button><p class="demo-msg" id="dm">こちらはご提案用のデモのため、送信はされません。</p></div>
+    </form>
+  </div>
+</section>
+
+<section class="cta">
+  <h2>塗り替えのご相談・お見積りは無料です</h2>
+  <p>強引な営業は一切いたしません。まずはお気軽にお電話ください。</p>
+  <a class="tel" href="tel:0422-47-1711">0422-47-1711</a>
+  <small>受付 8:00〜18:00(日曜休み)</small>
+  <div class="btns" style="justify-content:center"><a class="btn btn-k" href="contact.html">メールでお問い合わせ</a></div>
+</section>
+<footer class="site">
+  <div class="wrap ft">
+    <div>
+      <div class="name">有限会社 荻野塗装</div>
+      <p>〒181-0012 東京都三鷹市上連雀5-6-4<br>TEL 0422-47-1711 / FAX 0422-43-1723<br>MAIL ogino-tosou@outlook.jp<br>営業時間 8:00〜18:00(日曜休み)<br>東京都知事許可(般-4)第53030号 塗装工事業</p>
+      <p style="margin-top:10px"><a href="https://www.instagram.com/oginotosou.mitaka" target="_blank" rel="noopener">Instagram @oginotosou.mitaka</a></p>
+    </div>
+    <ul><li><a href="index.html">トップ</a></li><li><a href="about.html">会社案内</a></li><li><a href="works.html">施工事例・お客様の声</a></li><li><a href="flow.html">施工の流れ</a></li><li><a href="faq.html">よくある質問</a></li><li><a href="contact.html">お問い合わせ</a></li></ul>
+  </div>
+  <p class="copy">© OGINO TOSOU. All rights reserved.</p>
+</footer>
+<div class="fix-tel"><a class="t" href="tel:0422-47-1711">電話で相談する</a><a class="m" href="contact.html">メールで相談</a></div>
+<script>
+document.querySelectorAll('.case').forEach(function(c){
+  var b=c.querySelectorAll('.sw button');
+  b.forEach(function(x,i){x.addEventListener('click',function(){
+    b.forEach(function(y){y.classList.remove('on')});x.classList.add('on');
+    c.classList.toggle('show-after',i===1);
+    var l=c.querySelector('.lbl'); if(l) l.textContent=i===1?'施工後':'施工前';
+  })});
+});
+var tabs=document.querySelectorAll('.case-tabs button');
+tabs.forEach(function(t){t.addEventListener('click',function(){
+  tabs.forEach(function(y){y.classList.remove('on')});t.classList.add('on');
+  var f=t.dataset.f;
+  document.querySelectorAll('.cases .case').forEach(function(c){c.style.display=(f==='all'||c.dataset.area===f)?'':'none'});
+})});
+</script>
+</body>
+</html>
