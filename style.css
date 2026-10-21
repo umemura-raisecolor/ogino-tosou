@@ -83,7 +83,8 @@ section{padding:88px 0}
 /* greeting */
 .greet{display:grid;grid-template-columns:320px 1fr;gap:48px;align-items:start}
 .portrait{background:#e9e2d3;padding:14px}
-.portrait img{width:100%;filter:grayscale(1) contrast(1.05);aspect-ratio:4/5;object-fit:cover}
+.portrait img{width:100%;aspect-ratio:4/5;object-fit:cover;object-position:center top}
+.portrait figcaption small{display:block;font-family:"Noto Sans JP",sans-serif;font-size:12px;color:var(--gray);line-height:1.6;margin-top:4px}
 .portrait figcaption{text-align:center;font-family:"Shippori Mincho",serif;font-size:17px;margin-top:10px;color:var(--ai)}
 .greet h3{font-size:28px;color:var(--ai);margin-bottom:22px;line-height:1.6}
 .greet p+p{margin-top:1em}
